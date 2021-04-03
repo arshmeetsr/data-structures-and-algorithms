@@ -4,7 +4,6 @@ class Node {
         this.next = null;
     }
 }
-
 export default class SinglyLinkedList {
     constructor() {
         this.head = null;

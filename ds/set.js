@@ -1,23 +1,23 @@
 export default class Set {
     constructor() {
-        this.collection = [];
+        this.storage = [];
     }
 
     print() {
-        console.log(this.collection);
+        console.log(this.storage);
     }
 
     has(item) {
-        return this.collection.includes(item);
+        return this.storage.includes(item);
     }
 
     add(item) {
         if (this.has(item)) return;
-        this.collection.push(item);
+        this.storage.push(item);
     }
 
     remove(item) {
-        const index = this.collection.indexOf(item);
-        this.collection.splice(index, 1);
+        const index = this.storage.indexOf(item);
+        this.storage.splice(index, 1);
     }
 }

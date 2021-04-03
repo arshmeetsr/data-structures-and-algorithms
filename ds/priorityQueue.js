@@ -1,36 +1,36 @@
 export default class PriorityQueue {
     constructor() {
-        this.collection = [];
+        this.storage = [];
     }
 
     print() {
-        console.log(this.collection);
+        console.log(this.storage);
     }
 
     isEmpty() {
-        return this.collection.length === 0;
+        return this.storage.length === 0;
     }
 
     enqueue(item) {
         if (this.isEmpty()) {
-            this.collection.push(item);
+            this.storage.push(item);
         } else {
             let added = false;
-            for (let i = 0; i < this.collection.length; i++) {
-                if (item[1] < this.collection[i][1]) {
-                    this.collection.splice(i, 0, item);
+            for (let i = 0; i < this.storage.length; i++) {
+                if (item[1] < this.storage[i][1]) {
+                    this.storage.splice(i, 0, item);
                     added = true;
                     break;
                 }
             }
 
             if (!added) {
-                this.collection.push(item);
+                this.storage.push(item);
             }
         }
     }
 
     dequeue() {
-        return this.collection.shift();
+        return this.storage.shift();
     }
 }
