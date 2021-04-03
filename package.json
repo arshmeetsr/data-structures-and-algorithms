@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-modules problems/test.js"
+    "test": "node --experimental-modules test.js"
   },
   "author": "dev <dev@airtel.com>",
   "license": "ISC",
